@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Gerenciamento de Contatos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #007BFF;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Lista de Contatos</h2>
+<pre id="saida"></pre>
+
+<script>
+    const contatos = [
+        { nome: 'Fernanda', numero: 88675467 },
+        { nome: 'José', numero: 88907655 },
+        { nome: 'Eduardo', numero: 88923465 }
+    ];
+
+    contatos.push({ nome: 'Ana', numero: 88998877 });
+    contatos.shift();
+    document.getElementById("saida").textContent = JSON.stringify(contatos, null, 2);
+    console.log(contatos);
+</script>
+
+</body>
+</html>
